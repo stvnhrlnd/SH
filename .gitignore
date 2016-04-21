@@ -243,3 +243,8 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# App Data
+SH.Site/App_Data/*
+!SH.Site/App_Data/Models/*
+!SH.Site/App_Data/packages/*
