@@ -1,0 +1,10 @@
+﻿#main {
+    max-width: 700px;
+    padding: 10px 20px;
+}
+
+@media (min-width: 48em) {
+    #main {
+        padding-left: 170px;
+    }
+}

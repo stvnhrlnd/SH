@@ -1,2 +1,51 @@
 ﻿@inherits UmbracoViewPage<IMaster>
-@RenderBody()
+@{
+    var website = Model.Ancestor<Website>();
+    var menuItems = website.Children<IMaster>();
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@Model.SeoMetadata.Title</title>
+    <meta name="description" content="@Model.SeoMetadata.Description /">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <link rel="stylesheet" href="~/css/base.css" />
+    <link rel="stylesheet" href="~/css/layout/main.css" />
+    <link rel="stylesheet" href="~/css/layout/menu.css" />
+    <link rel="stylesheet" href="~/css/components/header.css" />
+    <link rel="stylesheet" href="~/css/components/post.css" />
+</head>
+<body>
+    <a href="#menu" id="menu-link">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+    <div id="menu">
+        <div class="pure-menu">
+            <span class="pure-menu-heading">@website.SiteName</span>
+
+            <ul class="pure-menu-list">
+                @foreach (var item in menuItems)
+                {
+                    var selected = Model.Id == item.Id;
+                    <li class="pure-menu-item @(selected ? "pure-menu-selected": "")">
+                        <a href="@item.Url" class="pure-menu-link">
+                            @item.Name
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        @RenderBody()
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script src="~/scripts/highlighting.js"></script>
+    <script src="~/scripts/menu.js"></script>
+</body>
+</html>

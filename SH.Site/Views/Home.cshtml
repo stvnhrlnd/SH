@@ -1,5 +1,16 @@
 ﻿@inherits UmbracoViewPage<Home>
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
+
+    var latestPost = (
+        from p in Umbraco.TypedContentAtRoot().DescendantsOrSelf<Post>()
+        orderby p.Published descending
+        select p
+    ).FirstOrDefault();
 }
-Home
+
+@if (latestPost != null)
+{
+    <div class="header">Latest Post</div>
+    @Html.Partial("_Post", latestPost)
+}

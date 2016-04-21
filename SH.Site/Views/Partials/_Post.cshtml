@@ -1,0 +1,8 @@
+﻿@model Post
+<div class="post">
+    <h1 class="post-title">@Model.Name</h1>
+    <p class="post-meta">@Model.Published.ToLongDateString()</p>
+    <div class="post-content">
+        @Model.Markdown
+    </div>
+</div>

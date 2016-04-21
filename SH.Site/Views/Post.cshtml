@@ -1,5 +1,5 @@
 ﻿@inherits UmbracoViewPage<Post>
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
-Post
+@Html.Partial("_Post", Model)
