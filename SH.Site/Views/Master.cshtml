@@ -31,7 +31,7 @@
             <ul class="pure-menu-list">
                 @foreach (var item in menuItems)
                 {
-                    var selected = Model.Id == item.Id;
+                    var selected = Model.Path.Split(',').Select(int.Parse).Contains(item.Id);
                     <li class="pure-menu-item @(selected ? "pure-menu-selected": "")">
                         <a href="@item.Url" class="pure-menu-link">
                             @item.Name
