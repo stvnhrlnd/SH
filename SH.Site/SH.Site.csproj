@@ -3028,6 +3028,10 @@
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\Post.generated.cs" />
     <Compile Include="App_Data\Models\Website.generated.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\BlogViewModel.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyValueConverters\MarkdownEditorValueConverter.cs" />
   </ItemGroup>

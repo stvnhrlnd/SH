@@ -1,14 +1,10 @@
-﻿@inherits UmbracoViewPage<Blog>
+﻿@inherits UmbracoViewPage<BlogViewModel>
 @{
     Layout = "Master.cshtml";
-
-    var posts = from p in Umbraco.TypedContentAtRoot().DescendantsOrSelf<Post>()
-                orderby p.Published descending
-                select p;
 }
 <div class="header">Blog</div>
 
-@foreach (var post in posts)
+@foreach (var post in Model.Posts)
 {
     <div class="post">
         <h2 class="post-title"><a href="@post.Url">@post.Name</a></h2>
