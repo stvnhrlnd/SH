@@ -537,6 +537,7 @@
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\Post.cshtml" />
     <Content Include="Views\Partials\_Post.cshtml" />
+    <Content Include="Views\Partials\_Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3030,8 +3031,10 @@
     <Compile Include="App_Data\Models\Website.generated.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Models\BlogViewModel.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\MenuViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyValueConverters\MarkdownEditorValueConverter.cs" />
   </ItemGroup>

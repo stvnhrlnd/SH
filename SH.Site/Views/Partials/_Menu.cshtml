@@ -1,0 +1,22 @@
+﻿@inherits UmbracoViewPage<MenuViewModel>
+<a href="#menu" id="menu-link">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+    <i class="fa fa-times" aria-hidden="true"></i>
+</a>
+<div id="menu">
+    <div class="pure-menu">
+        <span class="pure-menu-heading">@Model.SiteName</span>
+
+        <ul class="pure-menu-list">
+            @foreach (var item in Model.MenuItems)
+            {
+                var selected = Model.Content.Path.Split(',').Select(int.Parse).Contains(item.Id);
+                <li class="pure-menu-item @(selected ? "pure-menu-selected": "")">
+                    <a href="@item.Url" class="pure-menu-link">
+                        @item.Name
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
