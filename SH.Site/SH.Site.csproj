@@ -336,8 +336,8 @@
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="scripts\highlighting.js" />
     <Content Include="scripts\menu.js" />
+    <Content Include="vendor\highlight.js\foundation.css" />
     <Content Include="vendor\highlight.js\highlight.pack.js" />
-    <Content Include="vendor\highlight.js\monokai-sublime.css" />
     <Content Include="vendor\pure\base.css" />
     <Content Include="vendor\pure\menus.css" />
     <Content Include="Views\Web.config" />
