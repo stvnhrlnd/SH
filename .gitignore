@@ -248,3 +248,4 @@ ModelManifest.xml
 SH.Site/App_Data/*
 !SH.Site/App_Data/Models/*
 !SH.Site/App_Data/packages/*
+!SH.Site/App_Data/Umbraco.sdf
