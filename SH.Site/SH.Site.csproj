@@ -326,6 +326,7 @@
     <Content Include="App_Plugins\uSync\uSyncDashboardController.js" />
     <Content Include="App_Plugins\uSync\uSyncDashboardService.js" />
     <Content Include="css\base.css" />
+    <Content Include="css\components\github-corner.css" />
     <Content Include="css\components\header.css" />
     <Content Include="css\components\post.css" />
     <Content Include="css\layout\main.css" />
