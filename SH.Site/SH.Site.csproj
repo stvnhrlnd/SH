@@ -316,6 +316,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="android-chrome-192x192.png" />
+    <Content Include="apple-touch-icon.png" />
     <Content Include="App_Plugins\Epiphany.SeoMetadata\css\epiphany.seo.metadata.css" />
     <Content Include="App_Plugins\Epiphany.SeoMetadata\js\epiphany.seo.metadata.js" />
     <Content Include="App_Plugins\Epiphany.SeoMetadata\views\epiphany.seo.metadata.html" />
@@ -325,12 +327,17 @@
     <Content Include="App_Plugins\uSync\uSyncDashboard.html" />
     <Content Include="App_Plugins\uSync\uSyncDashboardController.js" />
     <Content Include="App_Plugins\uSync\uSyncDashboardService.js" />
+    <Content Include="browserconfig.xml" />
     <Content Include="css\base.css" />
     <Content Include="css\components\github-corner.css" />
     <Content Include="css\components\header.css" />
     <Content Include="css\components\post.css" />
     <Content Include="css\layout\main.css" />
     <Content Include="css\layout\menu.css" />
+    <Content Include="favicon-16x16.png" />
+    <Content Include="favicon-32x32.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="mstile-150x150.png" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
@@ -543,6 +550,7 @@
     <Content Include="Views\Post.cshtml" />
     <Content Include="Views\Partials\_Post.cshtml" />
     <Content Include="Views\Partials\_Menu.cshtml" />
+    <Content Include="manifest.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
