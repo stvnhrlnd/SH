@@ -345,6 +345,8 @@
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="scripts\highlighting.js" />
     <Content Include="scripts\menu.js" />
+    <Content Include="vendor\Font-Awesome\css\font-awesome.css" />
+    <Content Include="vendor\Font-Awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="vendor\highlight.js\foundation.css" />
     <Content Include="vendor\highlight.js\highlight.pack.js" />
     <Content Include="vendor\pure\base.css" />
@@ -552,6 +554,11 @@
     <Content Include="Views\Partials\_Post.cshtml" />
     <Content Include="Views\Partials\_Menu.cshtml" />
     <Content Include="manifest.json" />
+    <Content Include="vendor\Font-Awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="vendor\Font-Awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vendor\Font-Awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="vendor\Font-Awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="vendor\Font-Awesome\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
