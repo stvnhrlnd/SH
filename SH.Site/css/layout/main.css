@@ -1,6 +1,7 @@
 ﻿#main {
     max-width: 750px;
     padding: 10px 20px;
+    overflow-wrap: break-word;
 }
 
 @media (min-width: 48em) {
