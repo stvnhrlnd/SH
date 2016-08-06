@@ -37,6 +37,15 @@
         background: #333;
     }
 
+    #menu .pure-menu-divider {
+        border-bottom: 1px solid #333;
+    }
+
+    #menu .social-link:focus,
+    #menu .social-link:hover {
+        background: inherit;
+    }
+
 @media (min-width: 48em) {
     #menu {
         left: 0;
