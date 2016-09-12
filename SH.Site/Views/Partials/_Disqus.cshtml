@@ -1,0 +1,17 @@
+﻿@inherits UmbracoViewPage<IMaster>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = '@Umbraco.NiceUrlWithDomain(Model.Id)';
+        this.page.identifier = '@Model.Id';
+        this.page.title = '@Model.SeoMetadata.Title';
+    };
+
+    (function () {
+        var d = document,
+            s = d.createElement('script');
+        s.src = '//stevenhar-land.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    }());
+</script>
