@@ -1,10 +1,10 @@
-﻿@inherits UmbracoViewPage<IMaster>
+﻿@inherits UmbracoViewPage<IPublishedContent>
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
         this.page.url = '@Umbraco.NiceUrlWithDomain(Model.Id)';
         this.page.identifier = '@Model.Id';
-        this.page.title = '@Model.SeoMetadata.Title';
+        this.page.title = '@Model.Name';
     };
 
     (function () {
