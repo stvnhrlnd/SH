@@ -1,4 +1,5 @@
-﻿using SH.Site.Models;
+﻿using SH.Site.ExtensionMethods;
+using SH.Site.Models;
 using System.Web.Mvc;
 using Umbraco.Web;
 using Umbraco.Web.Mvc;
@@ -11,7 +12,7 @@ namespace SH.Site.Controllers
         [ChildActionOnly]
         public ActionResult Menu()
         {
-            var website = CurrentPage.Ancestor<Website>();
+            var website = CurrentPage.Website();
 
             var model = new MenuViewModel(CurrentPage);
             model.SiteName = website.SiteName;

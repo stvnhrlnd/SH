@@ -1,4 +1,5 @@
-﻿using SH.Site.Models;
+﻿using SH.Site.ExtensionMethods;
+using SH.Site.Models;
 using System.Linq;
 using System.Web.Mvc;
 using Umbraco.Web;
@@ -14,7 +15,7 @@ namespace SH.Site.Controllers
             var model = new HomeViewModel(CurrentPage as Home);
 
             model.LatestPost = (
-                from p in Umbraco.TypedContentAtRoot().DescendantsOrSelf<Post>()
+                from p in CurrentPage.Website().DescendantsOrSelf<Post>()
                 orderby p.Published descending
                 select p
             ).FirstOrDefault();

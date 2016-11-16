@@ -1,4 +1,5 @@
-﻿using SH.Site.Models;
+﻿using SH.Site.ExtensionMethods;
+using SH.Site.Models;
 using System.Linq;
 using System.Web.Mvc;
 using Umbraco.Web;
@@ -13,7 +14,7 @@ namespace SH.Site.Controllers
         {
             var model = new BlogViewModel(CurrentPage as Blog);
 
-            model.Posts = from p in Umbraco.TypedContentAtRoot().DescendantsOrSelf<Post>()
+            model.Posts = from p in CurrentPage.Website().DescendantsOrSelf<Post>()
                           orderby p.Published descending
                           select p;
 
