@@ -46,6 +46,33 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// Disqus Forum Shortname
+		///</summary>
+		[ImplementPropertyType("disqusForumShortname")]
+		public string DisqusForumShortname
+		{
+			get { return this.GetPropertyValue<string>("disqusForumShortname"); }
+		}
+
+		///<summary>
+		/// GitHub URL
+		///</summary>
+		[ImplementPropertyType("gitHubURL")]
+		public string GitHubUrl
+		{
+			get { return this.GetPropertyValue<string>("gitHubURL"); }
+		}
+
+		///<summary>
+		/// LinkedIn URL
+		///</summary>
+		[ImplementPropertyType("linkedInURL")]
+		public string LinkedInUrl
+		{
+			get { return this.GetPropertyValue<string>("linkedInURL"); }
+		}
+
+		///<summary>
 		/// Site Name
 		///</summary>
 		[ImplementPropertyType("siteName")]

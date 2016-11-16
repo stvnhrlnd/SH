@@ -1,17 +1,20 @@
 ﻿@inherits UmbracoViewPage<IPublishedContent>
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-        this.page.url = '@Umbraco.NiceUrlWithDomain(Model.Id)';
-        this.page.identifier = '@Model.Id';
-        this.page.title = '@Model.Name';
-    };
+@if (!string.IsNullOrWhiteSpace(Model.Website().DisqusForumShortname))
+{
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = '@Umbraco.NiceUrlWithDomain(Model.Id)';
+            this.page.identifier = '@Model.Id';
+            this.page.title = '@Model.Name';
+        };
 
-    (function () {
-        var d = document,
-            s = d.createElement('script');
-        s.src = '//stevenhar-land.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    }());
-</script>
+        (function () {
+            var d = document,
+                s = d.createElement('script');
+            s.src = '//@(Model.Website().DisqusForumShortname).disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }());
+    </script>
+}

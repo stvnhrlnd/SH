@@ -20,7 +20,7 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	// Mixin content Type 1054 with alias "master"
+	// Mixin content Type 1057 with alias "master"
 	/// <summary>Master</summary>
 	public partial interface IMaster : IPublishedContent
 	{

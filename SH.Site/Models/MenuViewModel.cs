@@ -11,5 +11,7 @@ namespace SH.Site.Models
         public string SiteName { get; set; }
 
         public IEnumerable<IPublishedContent> MenuItems { get; set; }
+
+        public string LinkedInUrl { get; set; }
     }
 }
