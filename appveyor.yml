@@ -8,3 +8,6 @@
     publish_wap: true
   before_build:
     nuget restore
+  deploy:
+    provider: Environment
+    name: stevenhar-land
