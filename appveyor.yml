@@ -1,0 +1,10 @@
+-
+  branches:
+    only:
+      - master
+  configuration: Release
+  version: 2.0.0-{build}
+  build:
+    publish_wap: true
+  before_build:
+    nuget restore
