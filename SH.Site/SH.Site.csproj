@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\uSync.3.2.2.740\build\uSync.props" Condition="Exists('..\packages\uSync.3.2.2.740\build\uSync.props')" />
   <Import Project="..\packages\UmbracoCms.7.5.4\build\UmbracoCms.props" Condition="Exists('..\packages\UmbracoCms.7.5.4\build\UmbracoCms.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
@@ -108,12 +109,12 @@
       <HintPath>..\packages\UmbracoCms.Core.7.5.4\lib\interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Jumoo.uSync.BackOffice, Version=3.1.3.740, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\uSync.3.1.3.740\lib\net45\Jumoo.uSync.BackOffice.dll</HintPath>
+    <Reference Include="Jumoo.uSync.BackOffice, Version=3.2.2.740, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.3.2.2.740\lib\net45\Jumoo.uSync.BackOffice.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Jumoo.uSync.Core, Version=5.3.4.740, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\uSync.Core.5.3.4.740\lib\net45\Jumoo.uSync.Core.dll</HintPath>
+    <Reference Include="Jumoo.uSync.Core, Version=5.5.2.740, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.Core.5.5.2.740\lib\net45\Jumoo.uSync.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, processorArchitecture=MSIL">
@@ -375,51 +376,11 @@
     <Content Include="vendor\pure\base.css" />
     <Content Include="vendor\pure\menus.css" />
     <Content Include="Views\Web.config" />
-    <Content Include="Config\Dashboard.config" />
+    <Content Include="Config\Dashboard.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Config\ClientDependency.config" />
     <Content Include="App_Plugins\Epiphany.SeoMetadata\package.manifest" />
-    <Content Include="Config\uSyncCore.config" />
-    <Content Include="Config\uSyncBackOffice.Config" />
-    <Content Include="App_Plugins\uSync\package.manifest" />
-    <Content Include="uSync\data\DataType\approved-color\ApprovedColor.config" />
-    <Content Include="uSync\data\DataType\checkbox-list\CheckboxList.config" />
-    <Content Include="uSync\data\DataType\content-picker\ContentPicker.config" />
-    <Content Include="uSync\data\DataType\date-picker-with-time\DatePickerWithTime.config" />
-    <Content Include="uSync\data\DataType\date-picker\DatePicker.config" />
-    <Content Include="uSync\data\DataType\dropdown-multiple\DropdownMultiple.config" />
-    <Content Include="uSync\data\DataType\dropdown\Dropdown.config" />
-    <Content Include="uSync\data\DataType\image-cropper\ImageCropper.config" />
-    <Content Include="uSync\data\DataType\label\Label.config" />
-    <Content Include="uSync\data\DataType\list-view-content\ListViewContent.config" />
-    <Content Include="uSync\data\DataType\list-view-media\ListViewMedia.config" />
-    <Content Include="uSync\data\DataType\list-view-members\ListViewMembers.config" />
-    <Content Include="uSync\data\DataType\markdown-editor\MarkdownEditor.config" />
-    <Content Include="uSync\data\DataType\media-picker\MediaPicker.config" />
-    <Content Include="uSync\data\DataType\member-picker\MemberPicker.config" />
-    <Content Include="uSync\data\DataType\multiple-media-picker\MultipleMediaPicker.config" />
-    <Content Include="uSync\data\DataType\numeric\Numeric.config" />
-    <Content Include="uSync\data\DataType\radiobox\Radiobox.config" />
-    <Content Include="uSync\data\DataType\related-links\RelatedLinks.config" />
-    <Content Include="uSync\data\DataType\richtext-editor\RichtextEditor.config" />
-    <Content Include="uSync\data\DataType\seo-metadata\SEOMetadata.config" />
-    <Content Include="uSync\data\DataType\tags\Tags.config" />
-    <Content Include="uSync\data\DataType\textarea\Textarea.config" />
-    <Content Include="uSync\data\DataType\textstring\Textstring.config" />
-    <Content Include="uSync\data\DataType\true-false\Truefalse.config" />
-    <Content Include="uSync\data\DataType\upload\Upload.config" />
-    <Content Include="uSync\data\DocumentType\compositions\master\def.config" />
-    <Content Include="uSync\data\DocumentType\pages\blog\def.config" />
-    <Content Include="uSync\data\DocumentType\pages\home\def.config" />
-    <Content Include="uSync\data\DocumentType\pages\post\def.config" />
-    <Content Include="uSync\data\DocumentType\structure\website\def.config" />
-    <Content Include="uSync\data\Languages\enUS.config" />
-    <Content Include="uSync\data\MediaType\file\def.config" />
-    <Content Include="uSync\data\MediaType\folder\def.config" />
-    <Content Include="uSync\data\MediaType\image\def.config" />
-    <Content Include="uSync\data\Template\master\blog\Blog.config" />
-    <Content Include="uSync\data\Template\master\home\Home.config" />
-    <Content Include="uSync\data\Template\master\Master.config" />
-    <Content Include="uSync\data\Template\master\post\Post.config" />
     <Content Include="Views\Blog.cshtml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Master.cshtml" />
@@ -458,6 +419,9 @@
     <Content Include="Config\BaseRestExtensions.config" />
     <Content Include="Config\applications.config" />
     <Content Include="Config\404handlers.config" />
+    <Content Include="Config\uSyncCore.Config" />
+    <Content Include="Config\uSyncBackOffice.Config" />
+    <Content Include="App_Plugins\uSync\package.manifest" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -530,9 +494,12 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\UmbracoCms.7.5.4\build\UmbracoCms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UmbracoCms.7.5.4\build\UmbracoCms.props'))" />
     <Error Condition="!Exists('..\packages\UmbracoCms.7.5.4\build\UmbracoCms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UmbracoCms.7.5.4\build\UmbracoCms.targets'))" />
+    <Error Condition="!Exists('..\packages\uSync.3.2.2.740\build\uSync.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\uSync.3.2.2.740\build\uSync.props'))" />
+    <Error Condition="!Exists('..\packages\uSync.3.2.2.740\build\uSync.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\uSync.3.2.2.740\build\uSync.targets'))" />
   </Target>
   <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
   <Import Project="..\packages\UmbracoCms.7.5.4\build\UmbracoCms.targets" Condition="Exists('..\packages\UmbracoCms.7.5.4\build\UmbracoCms.targets')" />
+  <Import Project="..\packages\uSync.3.2.2.740\build\uSync.targets" Condition="Exists('..\packages\uSync.3.2.2.740\build\uSync.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
