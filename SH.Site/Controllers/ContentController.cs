@@ -6,11 +6,13 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Umbraco.Core.Logging;
 using Umbraco.Web.WebApi;
 
 namespace SH.Site.Controllers
 {
+    [EnableCors("*", "*", "*", "ETag")]
     public class ContentController : UmbracoApiController
     {
         [HttpGet]
