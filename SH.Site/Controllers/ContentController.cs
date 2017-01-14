@@ -44,5 +44,26 @@ namespace SH.Site.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
         }
+
+        [HttpGet]
+        public HttpResponseMessage ValidateMd5(string hash)
+        {
+            try
+            {
+                // Ensure JSON cache MD5 exists
+                var physicalPath = HttpContext.Current.Server.MapPath(Constants.JsonCacheMd5Path);
+                if (!File.Exists(physicalPath))
+                    return Request.CreateResponse(HttpStatusCode.NotFound);
+                
+                // Compare request hash with hash on file
+                var fileHash = File.ReadAllText(physicalPath);
+                return Request.CreateResponse(hash == fileHash);
+            }
+            catch (Exception exception)
+            {
+                Logger.Error<JsonCacheController>("Could not validate JSON cache MD5.", exception);
+                return Request.CreateResponse(HttpStatusCode.InternalServerError);
+            }
+        }
     }
 }
