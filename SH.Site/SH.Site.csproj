@@ -449,6 +449,7 @@
     <Compile Include="App_Data\Models\Website.generated.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JsonCacheController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
