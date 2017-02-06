@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using SH.Site.Models;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,10 @@ namespace SH.Site.Controllers
                 // Serialise Umbraco content tree to JSON
                 var content = Umbraco.TypedContentAtRoot();
                 var contentModels = Mapper.Map<IEnumerable<JsonCacheContentModel>>(content);
-                var json = JsonConvert.SerializeObject(contentModels);
+                var json = JsonConvert.SerializeObject(contentModels, new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                });
 
                 // Write JSON to file
                 var physicalPath = HttpContext.Current.Server.MapPath(Constants.JsonCachePath);
