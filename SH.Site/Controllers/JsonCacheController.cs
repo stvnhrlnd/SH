@@ -55,7 +55,7 @@ namespace SH.Site.Controllers
         }
 
         [HttpGet]
-        public HttpResponseMessage ValidateMd5(string hash)
+        public HttpResponseMessage Validate(string hash)
         {
             try
             {
