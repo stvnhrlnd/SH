@@ -1,6 +1,5 @@
 ﻿using CommonMark;
 using System.Web;
-using Umbraco.Core;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
 
@@ -11,7 +10,7 @@ namespace SH.Site.PropertyValueConverters
     {
         public override bool IsConverter(PublishedPropertyType propertyType)
         {
-            return Constants.PropertyEditors.MarkdownEditorAlias.Equals(propertyType.PropertyEditorAlias);
+            return Umbraco.Core.Constants.PropertyEditors.MarkdownEditorAlias.Equals(propertyType.PropertyEditorAlias);
         }
 
         public override object ConvertDataToSource(PublishedPropertyType propertyType, object data, bool preview)
