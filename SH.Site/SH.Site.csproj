@@ -332,8 +332,6 @@
     <Content Include="App_Plugins\Epiphany.SeoMetadata\views\epiphany.seo.metadata.html" />
     <Content Include="App_Plugins\Epiphany.SeoMetadata\views\serp1.png" />
     <Content Include="App_Plugins\Epiphany.SeoMetadata\views\serp2.png" />
-    <Content Include="App_Plugins\JsonCache\json-cache.controller.js" />
-    <Content Include="App_Plugins\JsonCache\json-cache.html" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.htm" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
@@ -432,7 +430,6 @@
     <Content Include="Config\uSyncCore.Config" />
     <Content Include="Config\uSyncBackOffice.Config" />
     <Content Include="App_Plugins\uSync\package.manifest" />
-    <Content Include="App_Plugins\JsonCache\package.manifest" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -457,9 +454,8 @@
     <Compile Include="App_Data\Models\Website.generated.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\BlogController.cs" />
-    <Compile Include="Controllers\ContentController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JsonCacheController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="EventHandlers\JsonCacheEventHandler.cs" />
     <Compile Include="EventHandlers\WebApiEventHandler.cs" />
