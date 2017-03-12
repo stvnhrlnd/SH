@@ -18,14 +18,26 @@
                 </li>
             }
             <li class="pure-menu-divider"></li>
-            @if (!string.IsNullOrWhiteSpace(Model.LinkedInUrl))
-            {
-                <li class="pure-menu-item">
+            <li class="pure-menu-item social-links">
+                @if (!string.IsNullOrWhiteSpace(Model.ContactEmail))
+                {
+                    <a href="mailto:@Model.ContactEmail" class="pure-menu-link social-link">
+                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
+                    </a>
+                }
+                @if (!string.IsNullOrWhiteSpace(Model.LinkedInUrl))
+                {
                     <a href="@Model.LinkedInUrl" target="_blank" class="pure-menu-link social-link">
                         <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                     </a>
-                </li>
-            }
+                }
+                @if (!string.IsNullOrWhiteSpace(Model.TwitterUrl))
+                {
+                    <a href="@Model.TwitterUrl" target="_blank" class="pure-menu-link social-link">
+                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    </a>
+                }
+            </li>
         </ul>
     </div>
 </div>

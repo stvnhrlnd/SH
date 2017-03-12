@@ -12,6 +12,10 @@ namespace SH.Site.Models
 
         public IEnumerable<IPublishedContent> MenuItems { get; set; }
 
+        public string ContactEmail { get; set; }
+
         public string LinkedInUrl { get; set; }
+
+        public string TwitterUrl { get; set; }
     }
 }

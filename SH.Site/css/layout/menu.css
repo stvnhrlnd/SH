@@ -41,10 +41,20 @@
         border-bottom: 1px solid #333;
     }
 
-    #menu .social-link:focus,
-    #menu .social-link:hover {
-        background: inherit;
+    #menu .social-links {
+        padding-right: 1em;
     }
+
+        #menu .social-link {
+            display: inline-block;
+            font-size: 1.2em;
+            padding: .6em 0 .6em .5em;
+        }
+
+            #menu .social-link:focus,
+            #menu .social-link:hover {
+                background: inherit;
+            }
 
 @media (min-width: 48em) {
     #menu {

@@ -17,7 +17,9 @@ namespace SH.Site.Controllers
             var model = new MenuViewModel(CurrentPage);
             model.SiteName = website.SiteName;
             model.MenuItems = website.Children<IMaster>();
+            model.ContactEmail = website.ContactEmail;
             model.LinkedInUrl = website.LinkedInUrl;
+            model.TwitterUrl = website.TwitterUrl;
 
             return PartialView("_Menu", model);
         }
