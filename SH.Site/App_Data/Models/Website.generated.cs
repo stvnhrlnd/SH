@@ -46,6 +46,15 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// Contact Email
+		///</summary>
+		[ImplementPropertyType("contactEmail")]
+		public string ContactEmail
+		{
+			get { return this.GetPropertyValue<string>("contactEmail"); }
+		}
+
+		///<summary>
 		/// Disqus Forum Shortname
 		///</summary>
 		[ImplementPropertyType("disqusForumShortname")]
@@ -79,6 +88,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string SiteName
 		{
 			get { return this.GetPropertyValue<string>("siteName"); }
+		}
+
+		///<summary>
+		/// Twitter URL
+		///</summary>
+		[ImplementPropertyType("twitterURL")]
+		public string TwitterUrl
+		{
+			get { return this.GetPropertyValue<string>("twitterURL"); }
 		}
 
 		///<summary>
