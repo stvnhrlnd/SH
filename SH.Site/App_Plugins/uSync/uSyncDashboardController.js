@@ -11,6 +11,7 @@
         $scope.showSettings = false;
         $scope.showTechnical = false;
         $scope.showActions = false;
+        $scope.deleteActionFile = false;
 
         LoadSettings();
 
@@ -24,7 +25,7 @@
 
                 $scope.loadHistory();
             });
-        };
+        }
 
         $scope.loadHistory = function () {
             uSyncDashboardService.getHistory()
@@ -39,10 +40,7 @@
             uSyncDashboardService.getuSyncActions()
             .then(function (response) {
                 $scope.uSyncActions = response.data;
-                if ($scope.uSyncActions == 0) {
-                    console.log('no actions to load.')
-                }
-                else {
+                if ($scope.uSyncActions != 0) {
                     $scope.showActions = true;
                 }
             });
@@ -171,7 +169,7 @@
 
             $scope.loadHistory();
 
-            uSyncDashboardService.exporter()
+            uSyncDashboardService.exporter($scope.deleteActionFile)
             .then(function (response) {
                 $scope.changes = response.data;
                 $scope.reporting = false;
@@ -260,7 +258,6 @@
         $scope.showNoChange = false;
 
         $scope.showChange = function (changeValue) {
-            console.log('show:', changeValue)
             if ($scope.showNoChange || changeValue > 0) {
                 return true;
             }
@@ -276,4 +273,20 @@
             $scope.errorMsg = "";
             $scope.isInError = false;
         }
+
+        $scope.visibleHandler = -1;
+
+        $scope.toggleGroup = function (index) {
+            if ($scope.visibleHandler == index) {
+                $scope.visibleHandler = -1;
+            }
+            else {
+                $scope.visibleHandler = index;
+            }
+        }
+
+        $scope.showToggle = function (index) {
+            return $scope.visibleHandler == index;
+        }
+
     });
