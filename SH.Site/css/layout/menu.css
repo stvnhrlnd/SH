@@ -56,6 +56,11 @@
                 background: inherit;
             }
 
+    #menu .umbraco-badge {
+        display: block;
+        margin: 1em;
+    }
+
 @media (min-width: 48em) {
     #menu {
         left: 0;
