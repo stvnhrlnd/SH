@@ -3,7 +3,7 @@ using System.Web;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
 
-namespace SH.Site.PropertyValueConverters
+namespace SH.Site.ValueConverters
 {
     [PropertyValueType(typeof(IHtmlString))]
     public class MarkdownEditorValueConverter : PropertyValueConverterBase
