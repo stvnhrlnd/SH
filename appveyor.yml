@@ -3,7 +3,7 @@
     only:
       - master
   configuration: Release
-  version: 2.2.0-{build}
+  version: 2.3.0-{build}
   build:
     publish_wap: true
   before_build:
