@@ -364,6 +364,7 @@
     <Content Include="Config\Lang\sv-SE.user.xml" />
     <Content Include="Config\Lang\zh-CN.user.xml" />
     <Content Include="css\base.css" />
+    <Content Include="css\components\error.css" />
     <Content Include="css\components\github-corner.css" />
     <Content Include="css\components\header.css" />
     <Content Include="css\components\post.css" />
@@ -450,6 +451,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Plugins\uSync\package.manifest" />
+    <Content Include="Views\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -464,6 +466,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\Models\Blog.generated.cs" />
+    <Compile Include="App_Data\Models\Error.generated.cs" />
+    <Compile Include="App_Data\Models\ErrorPages.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\Home.generated.cs" />

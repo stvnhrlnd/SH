@@ -1,0 +1,9 @@
+﻿@inherits UmbracoViewPage<Error>
+@{
+    Layout = "Master.cshtml";
+
+    Html.RequiresCss("~/css/components/error.css");
+}
+<div class="header">Error</div>
+<div class="error-skull">💀</div>
+@Model.Markdown
